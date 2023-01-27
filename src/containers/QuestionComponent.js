@@ -8,7 +8,7 @@ const QuestionComponent = () => {
         const renderList = questions.map((question) => {
             const {id, title} = question;
             return(
-                <div className="four wide column" key={id}>
+                <div className="wide" key={id}>
                     <Link to={`/question/${id}`}>
                         <div className="ui link cards">
                             <div className="card">
