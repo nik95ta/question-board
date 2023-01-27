@@ -28,7 +28,6 @@ const QuestionListing = () => {
     useEffect(() => {
         fetchQuestions();
     }, []);
-    console.log(questions);
     return (
         <div className="ui grid container">
             <QuestionComponent />

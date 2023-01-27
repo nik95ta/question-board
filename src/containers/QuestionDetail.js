@@ -11,7 +11,6 @@ const QuestionDetail = () => {
     const { title, description} = question;
     const { questionId } = useParams();
     const dispatch = useDispatch();
-    console.log(question);
 
     const fetchQuestionDetail = async () => {
         const response = await axios
