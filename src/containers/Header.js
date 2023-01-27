@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import Modal from './Modal';
+import QuestionAddModal from './QuestionAddModal';
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
+    const history = useHistory();
+
     return (
         <div className="ui fixed menu">
             <div className="grid center">
-                <h2>Question Answer</h2>
+                <h2 onClick={() => history.push('/')}>Question Answer</h2>
                 <button onClick={() => setShowModal(true)}>New Question</button>
             </div>
-            <Modal show={showModal} onClose={() => setShowModal(false)} />
+            <QuestionAddModal show={showModal} onClose={() => setShowModal(false)} />
         </div>
     );
 };

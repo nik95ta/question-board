@@ -5,9 +5,9 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import BaseApi from "../api/BaseApi";
 import { useDispatch } from "react-redux";
-import {ActionTypes} from "../redux/constants/action-types";
+import { ActionTypes } from "../redux/constants/action-types";
 
-const Modal = (props) => {
+const QuestionAddModal = (props) => {
 
     const [ responseBody, setResponseBody ] = useState({ title: '', description: '' });
 
@@ -33,7 +33,7 @@ const Modal = (props) => {
         return response.data;
     };
 
-    const onSubmitHandler = (event) => {
+    const onSubmitQuestionHandler = (event) => {
         event.preventDefault();
         fetchQuestionAdd(responseBody.title, responseBody.description).then((response) => {
             history.push(`/question/${response.id}`);
@@ -47,7 +47,7 @@ const Modal = (props) => {
     return ReactDom.createPortal(
         <div className="modal" onClick={props.onClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
-                <form onSubmit={onSubmitHandler}>
+                <form onSubmit={onSubmitQuestionHandler}>
                     <div className="modal-header">
                         <h4 className="modal-title">Add New Question</h4>
                     </div>
@@ -69,4 +69,4 @@ const Modal = (props) => {
     );
 };
 
-export default Modal
+export default QuestionAddModal
