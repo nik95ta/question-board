@@ -5,31 +5,57 @@
       "title": "question title 1",
       "description": "question description 1",
       "author": "person 1",
-      "datetime": "2012-01-26T13:51:50.417-07:00"
+      "datetime": "2012-01-26T13:51:50.417-07:00",
+      "answersCount": 0
     },
     {
       "id": 2,
       "title": "question title 2",
       "description": "question description 2",
       "author": "person 1",
-      "datetime": "2014-01-26T13:51:50.417-07:00"
+      "datetime": "2014-01-26T13:51:50.417-07:00",
+      "answersCount": 0
+    },
+    {
+      "title": "salam1",
+      "description": "salam2",
+      "dateTime": "2023-01-27T07:36:01.840Z",
+      "answersCount": 0,
+      "id": 3
+    },
+    {
+      "title": "salam 2",
+      "description": "salam 3",
+      "dateTime": "2023-01-27T07:39:06.565Z",
+      "answersCount": 0,
+      "id": 4
+    },
+    {
+      "title": "salam 3",
+      "description": "salam 4",
+      "dateTime": "2023-01-27T07:42:56.767Z",
+      "answersCount": 0,
+      "id": 5
     }
   ],
-  "answers" : [{
-    "id": 1,
-    "questionId": 1,
-    "author": "person 2",
-    "description": "answer description 1",
-    "datetime": "2014-01-26T13:51:50.417-07:00",
-    "plus": 0,
-    "minus": 0
-  },{
-    "id": 2,
-    "questionId": 1,
-    "author": "person 3",
-    "description": "answer description 2",
-    "datetime": "2014-01-26T13:51:50.417-07:00",
-    "plus": 0,
-    "minus": 0
-  }]
+  "answers": [
+    {
+      "id": 1,
+      "questionId": 1,
+      "author": "person 2",
+      "description": "answer description 1",
+      "datetime": "2014-01-26T13:51:50.417-07:00",
+      "plus": 0,
+      "minus": 0
+    },
+    {
+      "id": 2,
+      "questionId": 1,
+      "author": "person 3",
+      "description": "answer description 2",
+      "datetime": "2014-01-26T13:51:50.417-07:00",
+      "plus": 0,
+      "minus": 0
+    }
+  ]
 }

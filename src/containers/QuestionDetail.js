@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import axios from "axios";
-import BaseApi from "../constants/BaseApi";
+import BaseApi from "../api/BaseApi";
 import { useDispatch, useSelector } from "react-redux";
 import { selectedQuestion, removeSelectedQuestion } from "../redux/actions/questionActions";
 import { ActionTypes } from "../redux/constants/action-types";
@@ -22,19 +22,39 @@ const QuestionDetail = () => {
                 })
                 console.log("Err", err);
             });
-
         dispatch(selectedQuestion(response.data));
 
     };
 
+    const renderAnswersList = () => {
+        const { answers } = question;
+        if (answers && answers.length > 0) {
+            return (
+                <>
+                    {answers.map((answer) =>
+                        <div className="wide" key={answer.id}>
+                            <div className="ui link cards">
+                                <div className="card">
+                                    <div className="content">
+                                        <div className="header">{answer.description}</div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>)}
+                </>
+            );
+        }
+    };
+
     useEffect(() => {
-        if(questionId && questionId !=="") {
+        if (questionId && questionId !=="") {
             fetchQuestionDetail();
         }
         return () => {
             dispatch(removeSelectedQuestion())
         }
     }, [questionId]);
+
     return (
         <div className="ui grid container">
             {Object.keys(question).length === 0 ? (
@@ -49,6 +69,7 @@ const QuestionDetail = () => {
                             </div>
                         </div>
                     </div>
+                    {renderAnswersList()}
                 </div>
             )}
         </div>

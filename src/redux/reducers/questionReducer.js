@@ -32,7 +32,7 @@ export const selectedQuestionReducer = (state = {}, {type, payload}) => {
                 loading:false
             };
         case ActionTypes.QUESTIONS_ERROR:
-            return{
+            return {
                 loading: false,
                 error: payload
             };

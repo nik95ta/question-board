@@ -7,7 +7,7 @@ const Header = () => {
         <div className="ui fixed menu">
             <div className="grid center">
                 <h2>Question Answer</h2>
-                <button onClick={() => setShowModal(true)}>Show Modal</button>
+                <button onClick={() => setShowModal(true)}>New Question</button>
             </div>
             <Modal show={showModal} onClose={() => setShowModal(false)} />
         </div>
