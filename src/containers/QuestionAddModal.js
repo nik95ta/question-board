@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import './style/Modal.css';
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import BaseApi from "../api/BaseApi";
+import BaseApi from "../common/BaseApi";
 import { useDispatch } from "react-redux";
 import { ActionTypes } from "../redux/constants/action-types";
 

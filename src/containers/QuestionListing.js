@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import axios from "axios";
-import BaseApi from "../api/BaseApi";
+import BaseApi from "../common/BaseApi";
 import { useDispatch, useSelector } from "react-redux";
 import { setQuestions } from "../redux/actions/questionActions";
 import QuestionComponent from "./QuestionComponent";
