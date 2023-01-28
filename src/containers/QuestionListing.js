@@ -28,7 +28,7 @@ const QuestionListing = () => {
         fetchQuestions();
     }, []);
     return (
-        <div className="ui grid container">
+        <div className="flex items-center justify-center mx-12 flex-col">
             <QuestionComponent />
         </div>
     );
