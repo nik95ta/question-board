@@ -59,18 +59,16 @@ const QuestionAddModal = (props) => {
     <div className="modal" onClick={props.onClose}>
       <div onClick={(e) => e.stopPropagation()} className="bg-gray-100 shadow w-6/12 m-8 rounded-xl">
 <nav className="bg-white py-2 md:py-4 rounded-xl">
-      <div className="container px-12 mx-auto md:flex md:items-center">
-
+      <div className="container px-14 mx-auto md:flex md:items-center">
         <div
           className="hidden md:flex flex-auto md:ml-auto mt-3 md:mt-0 flex items-center"
           id="navbar-collapse "
         >
              <button onClick={props.onClose} type='submit' >
-               انصراف</button>
+              X</button>
         </div>
         <ul className="hidden md:flex flex-col md:flex-row space-x-6 items-center">
           <li className="text-black-600 font-bold" style={{direction:'rtl'}}>ایجاد سوال جدید</li>
-
         </ul>
       </div>
     </nav>
@@ -102,21 +100,19 @@ const QuestionAddModal = (props) => {
                 type="text"
               />
             </div>
-            <div className="modal-footer">
+            <div className="mt-6">
               <div className="flex flex-row gap-4">
               <button type='submit' className="text-white border font-bold bg-green-600 cursor-pointer px-6 py-2 font-normal rounded-lg flex items-center">
               ایجاد سوال</button>
 
-              <button onClick={props.onClose} type='submit' className="text-white border font-bold bg-green-600 cursor-pointer px-6 py-2 font-normal rounded-lg flex items-center">
+              <button onClick={props.onClose} type='submit' className="text-green-600 font-bold cursor-pointer px-6 py-2 flex items-center">
                انصراف</button>
 
               </div>
             </div>
           </div>
         </form>
-
                      </div>
-
           </div>
         </div>
     </div>,

@@ -10,6 +10,7 @@ import {
 import { ActionTypes } from "../redux/constants/action-types";
 import { renderDate, renderTime } from "../common/DateTime";
 import AnswerListing from "./AnswerListing";
+import MAN from "../assets/man.svg";
 
 const QuestionDetail = () => {
   const question = useSelector((state) => state.question);
@@ -78,8 +79,9 @@ const QuestionDetail = () => {
                       </li>
                       <li className="rounded-lg">
                         <img
-                          src="https://www.soccerbible.com/media/55837/ramos-interview-4.jpg"
-                          className="object-contain rounded-lg w-16 h-16"
+                          src={MAN}
+                          alt="man"
+                        //   className="object-contain rounded-lg w-16 h-16"
                         />
                       </li>
                     </ul>

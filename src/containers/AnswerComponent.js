@@ -5,6 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectedQuestion } from "../redux/actions/questionActions";
 import { ActionTypes } from "../redux/constants/action-types";
 import { renderDate, renderTime } from "../common/DateTime";
+import HAPPY from "../assets/happy.svg";
+import SAD from "../assets/sad.svg";
+import SAD_2 from "../assets/sad-2.svg";
+import MAN from "../assets/man.svg";
 
 const AnswerComponent = (props) => {
   const answer = props.answer;
@@ -53,8 +57,8 @@ const AnswerComponent = (props) => {
               className="hidden md:flex flex-auto md:ml-auto mt-3 md:mt-0 flex items-center"
               id="navbar-collapse "
             >
-              <div> Positive: {answer.plus} </div>
-              <div className="mr-16 ml-8"> Negative: {answer.minus} </div>
+              <div className="flex flex-row gap-2 justify-center items-center">{answer.plus} <img src={HAPPY} alt='happy' /></div>
+              <div className="mr-16 ml-8 flex flex-row gap-2 justify-center items-center">{answer.minus}  <img src={SAD_2} alt='sad' /></div>
               <p className="font-bold">
                 <span className="text-gray-400"> تاریخ: </span>
                 {renderDate(answer.dateTime)}
@@ -72,12 +76,13 @@ const AnswerComponent = (props) => {
                   direction: "rtl",
                 }}
               >
-                علی کیا {/* {description}{" "} */}{" "}
+                علی کیا
               </h2>
               <li className="rounded-lg">
                 <img
-                  src="https://www.soccerbible.com/media/55837/ramos-interview-4.jpg"
-                  className="object-contain rounded-lg w-16 h-16"
+                  src={MAN}
+                  alt="man"
+                //   className="object-contain rounded-lg w-16 h-16"
                 />
               </li>
             </ul>
@@ -86,11 +91,17 @@ const AnswerComponent = (props) => {
         <div className=" mx-12 my-6">
           <div className="text-right"> {answer.answer} </div>
           <div className="flex flex-row gap-4">
-          <button onClick={() => onScoreSubmit(true)} className="text-green-600 border border-2 font-bold border-green-600 bg-transparent cursor-pointer px-4 py-1 font-normal shadow-md rounded-lg flex my-8">
-            nice
-          </button>
           <button onClick={() => onScoreSubmit(false)} className="text-red-900 border border-2 font-bold border-red-900 bg-transparent cursor-pointer px-4 py-1 font-normal shadow-md rounded-lg flex my-8">
-            bad
+          <div className="flex flex-row gap-2 justify-center items-center">
+            خوب نبود <img src={SAD} alt="sad" />
+            </div>
+
+          </button>
+          <button onClick={() => onScoreSubmit(true)} className="text-green-600 border border-2 font-bold border-green-600 bg-transparent cursor-pointer px-4 py-1 font-normal shadow-md rounded-lg flex my-8">
+          <div className="flex flex-row gap-2 justify-center items-center">
+            خوب بود <img src={HAPPY} alt="happy" />
+            </div>
+
           </button>
           </div>
         </div>
