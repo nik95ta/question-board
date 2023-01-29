@@ -71,10 +71,7 @@ const AnswerComponent = (props) => {
             </div>
             <ul className="hidden md:flex flex-col md:flex-row space-x-6 items-center">
               <h2
-                className="text-black-600 text-lg font-bold"
-                style={{
-                  direction: "rtl",
-                }}
+                className="text-black-600 text-lg font-900 font-IRANYekan"
               >
                 علی کیا
               </h2>
@@ -82,7 +79,6 @@ const AnswerComponent = (props) => {
                 <img
                   src={MAN}
                   alt="man"
-                //   className="object-contain rounded-lg w-16 h-16"
                 />
               </li>
             </ul>
@@ -91,13 +87,13 @@ const AnswerComponent = (props) => {
         <div className=" mx-12 my-6">
           <div className="text-right"> {answer.answer} </div>
           <div className="flex flex-row gap-4">
-          <button onClick={() => onScoreSubmit(false)} className="text-red-900 border border-2 font-bold border-red-900 bg-transparent cursor-pointer px-4 py-1 font-normal shadow-md rounded-lg flex my-8">
+          <button onClick={() => onScoreSubmit(false)} className="text-red-500 border border-2 font-bold border-red-500 bg-transparent cursor-pointer px-4 py-1 font-normal shadow-md rounded-lg flex my-8">
           <div className="flex flex-row gap-2 justify-center items-center">
             خوب نبود <img src={SAD} alt="sad" />
             </div>
 
           </button>
-          <button onClick={() => onScoreSubmit(true)} className="text-green-600 border border-2 font-bold border-green-600 bg-transparent cursor-pointer px-4 py-1 font-normal shadow-md rounded-lg flex my-8">
+          <button onClick={() => onScoreSubmit(true)} className="text-green-400 border border-2 font-bold border-green-400 bg-transparent cursor-pointer px-4 py-1 font-normal shadow-md rounded-lg flex my-8">
           <div className="flex flex-row gap-2 justify-center items-center">
             خوب بود <img src={HAPPY} alt="happy" />
             </div>

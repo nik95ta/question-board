@@ -12,7 +12,7 @@ const QuestionListing = () => {
 
     const fetchQuestions = async () => {
         const response = await axios
-            .get(BaseApi + 'questions')
+            .get(BaseApi + 'questions?_sort=id&_order=desc')
             .catch((err) => {
                 dispatch( {
                     type: ActionTypes.QUESTIONS_ERROR,
@@ -21,7 +21,6 @@ const QuestionListing = () => {
                 console.log("Err", err);
             });
         dispatch(setQuestions(response.data));
-        console.log(response.data);
     };
 
     useEffect(() => {

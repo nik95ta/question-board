@@ -77,10 +77,12 @@ const QuestionAddModal = (props) => {
                      <form onSubmit={onSubmitQuestionHandler}>
           <div className="modal-body">
           <div>
-              <label htmlFor="title" style={{direction:'rtl'}}>موضوع:</label>
+              <label htmlFor="title">:موضوع</label>
             </div>
             <div className="my-3 w-full grid rounded-lg">
               <input
+              dir="auto"
+              required
               className="p-10 rounded-lg"
                 id="title"
                 name="title"
@@ -93,6 +95,8 @@ const QuestionAddModal = (props) => {
             </div>
             <div className="my-3 w-full grid rounded-lg">
               <input
+               dir="auto"
+               required
               className="p-10 rounded-lg"
                 id="description"
                 name="description"

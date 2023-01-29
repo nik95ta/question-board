@@ -2,7 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'iran-yekan': "iran yekan"
+    },
+    extend: {
+      extend: {
+        fontFamily: {
+          'IRANYekan': ['IRANYekan', "sans-serif", ]
+        },
+      },
+    },
     // colors: {
     //   white: '#00000',
     //   black: '#fffff',

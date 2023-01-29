@@ -41,7 +41,6 @@ const QuestionDetail = () => {
     };
   }, [questionId]);
 
-  console.log("question", question);
   return (
     <div className="">
       {" "}
@@ -93,7 +92,7 @@ const QuestionDetail = () => {
               </div>
 
 
-         <h1 className=" mx-12 my-2 flex text-3xl justify-end font-bold">پاسخ ها</h1>
+         <h1 className=" mx-12 my-2 flex text-3xl justify-end font-900 font-IRANYekan">پاسخ ها</h1>
           <AnswerListing />
         </div>
       )}

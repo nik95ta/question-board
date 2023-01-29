@@ -19,10 +19,17 @@ const AnswerListing = () => {
     if (answers && answers.length > 0) {
       return (
         <>
-          {" "}
           {answers.map((answer) => (
             <AnswerComponent key={answer.id} answer={answer} />
-          ))}{" "}
+          ))}
+        </>
+      );
+    } else {
+      return (
+        <>
+          <p className="flex justify-end mx-20 my-4">
+            پاسخی موجود نیست
+          </p>
         </>
       );
     }
@@ -92,35 +99,37 @@ const AnswerListing = () => {
           <h4 className="modal-title"> </h4>
         </div>
         <div className="w-full flex mx-8 flex-col">
-            <label
-              className=" mx-20 flex text-3xl justify-end font-bold"
-              htmlFor="title"
-            >
-              پاسخ خود را ثبت کنید
-            </label>
-            <p className="flex justify-end mx-20 my-4">
-              پاسخ خود را بنویسید
-            </p>
-
+          <label
+            className=" mx-20 flex text-3xl justify-end font-bold"
+            htmlFor="title"
+          >
+            پاسخ خود را ثبت کنید
+          </label>
+          <p className="flex justify-end mx-20 my-4">
+            پاسخ خود را بنویسید
+          </p>
           <div className="rounded-lg grid">
             <textarea
+              style={{ textAlign: "right" }}
+              required
               className="rounded-lg mr-20 ml-4 my-4 p-6"
-              style={{
-                direction: "rtl",
-              }}
+              dir="auto"
               id="title"
               name="title"
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
               type="text"
-              placeholder="متن پاسخ ..."
+              placeholder="...متن پاسخ"
             />
           </div>
         </div>
         <div className="flex justify-end">
-        <button type="submit" className="leading-3 text-white bg-green-600 cursor-pointer px-16 py-4 font-normal rounded-lg flex justify-end mx-12 my-6 items-center">
-          ارسال پاسخ
-        </button>
+          <button
+            type="submit"
+            className="leading-3 text-white bg-green-600 cursor-pointer px-16 py-4 font-normal rounded-lg flex justify-end mx-12 my-6 items-center"
+          >
+            ارسال پاسخ
+          </button>
         </div>
       </form>
     );

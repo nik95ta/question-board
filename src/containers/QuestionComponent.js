@@ -34,7 +34,7 @@ const QuestionComponent = () => {
                 </div>
                 <ul className="hidden md:flex flex-col md:flex-row space-x-6 items-center">
                   <li
-                    className="text-black-600 font-bold"
+                    className="text-black font-bold"
                     style={{
                       direction: "rtl",
                     }}
@@ -52,11 +52,13 @@ const QuestionComponent = () => {
             </nav>
             <div className=" mx-12 my-6">
               <div className="text-right"> {title} </div>
-              <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 leading-3 text-green-600 border border-2 font-bold border-green-600 bg-transparent cursor-pointer px-4 py-3 font-normal shadow-md rounded-lg flex my-8">
-                <Link className="font-bold" to={`/question/${id}`}>
+              <Link className="font-bold" to={`/question/${id}`}>
+              <button className="leading-3 text-green-600 border border-2 font-bold border-green-600 bg-transparent cursor-pointer px-4 py-3 font-normal shadow-md rounded-lg flex my-8">
+
                   مشاهده جزییات
-                </Link>
+
               </button>
+              </Link>
             </div>
           </div>
         </>
