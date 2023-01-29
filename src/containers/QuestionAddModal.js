@@ -77,7 +77,7 @@ const QuestionAddModal = (props) => {
                      <form onSubmit={onSubmitQuestionHandler}>
           <div className="modal-body">
           <div>
-              <label htmlFor="title">:موضوع</label>
+              <label htmlFor="title">موضوع</label>
             </div>
             <div className="my-3 w-full grid rounded-lg">
               <input
